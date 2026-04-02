@@ -13,11 +13,7 @@ const Cart = ({ products,total ,increment,decrement,reset,change,empty,del}) => 
         <CartItems product={product} key={product.id} increment={increment} decrement={decrement} del={del}/>
       ))}
 <div className={"text-center font-semibold text-2xl mt-10 "}>
-        {total ==0 ? (
-          <span className="text-red-600 font-semibold text-3xl">Empty</span>
-        ) : (
-          `Total : ${total} EGP`
-        )}
+        {total ==0 ? <span className="text-red-600 font-semibold text-3xl">Empty</span> : `Total : ${total} EGP`}
           
 </div>
     </div>
